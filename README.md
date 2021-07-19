@@ -93,6 +93,7 @@ $ pip install -r requirements.txt
 
 /*-------------------------------For Different Database -----------------------------*/
 1.Add in settings.py
+
 # DATABASE_ROUTERS = ['Folder_name.file_name.class_name']
 
 DATABASE_ROUTERS = ['task_project.ProductRouters.ProductRouter']
@@ -104,14 +105,14 @@ DATABASES = {
     },
     'product_db': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'Product.db.sqlite3', #'NAME': BASE_DIR / model_name.dp.sqlite3
+        'NAME': BASE_DIR / 'Product.db.sqlite3',
     }
 }
 
 2.create ProductRouters.py in tesk_project
 ProductRouters.py
 class ProductRouter:
-    # route_app_labels = {'model name'}
+    // route_app_labels = {'model name'}
     route_app_labels = {'Product'}
 
     def db_for_read(self, model, **hints):
