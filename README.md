@@ -112,7 +112,7 @@ DATABASES = {
 2.create ProductRouters.py in tesk_project
 ProductRouters.py
 class ProductRouter:
-    // route_app_labels = {'model name'}
+#route_app_labels = {'model name'}
     route_app_labels = {'Product'}
 
     def db_for_read(self, model, **hints):
