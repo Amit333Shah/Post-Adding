@@ -110,9 +110,9 @@ DATABASES = {
 }
 
 2.create ProductRouters.py in tesk_project
-ProductRouters.py
+
+
 class ProductRouter:
-#route_app_labels = {'model name'}
     route_app_labels = {'Product'}
 
     def db_for_read(self, model, **hints):
@@ -137,5 +137,3 @@ class ProductRouter:
         if app_label in self.route_app_labels:
             return db == 'product_db'
         return None
-
-
